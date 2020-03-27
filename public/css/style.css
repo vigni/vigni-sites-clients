@@ -1,0 +1,65 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 60px;
+    background-color: #333333;
+    padding: 0 100px;
+}
+
+header .title h1{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+header .title a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    margin-left: 10px;
+    color:white;
+}
+
+
+.menu a:hover{
+    text-decoration: underline;
+}
+
+.index-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.index h1{
+    text-align: center;
+    margin : 20px;
+}
+.table{
+    width: 70%;
+}
+
+.index .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add a{
+    color: black;
+}
+.add a:hover{
+    text-decoration: none;
+}

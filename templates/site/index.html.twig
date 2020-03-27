@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les sites{% endblock %}
+
+{% block body %}
+<div class="index">
+    <h1>Les sites</h1>
+    <div class="search">
+        {{ form_start(formsearch, {'attr': {'class': 'inline-search', "id": "form_search"}}) }}
+        {{ form_widget(formsearch.search, {'attr': {'class': 'search-input', 'placeholder':'Rechercher'}})}}
+    </div>
+    
+    <div class="index-container">
+    
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Lien</th>
+                    <th>Version PHP</th>
+                    <th>Client</th>
+                    <th>Crée le</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for site in sites %}
+                <tr>
+                    <td>{{ site.id }}</td>
+                    <td>{{ site.name }}</td>
+                    <td>{{ site.link }}</td>
+                    <td>{{ site.versionPHP }}</td>
+                    <td>{{ site.client }}</td>
+                    <td>{{ site.createdAt | date("d/m/y") }}</td>
+                    <td>
+                        <a href="{{ path('site_show', {'id': site.id}) }}">Détail </a><span>|</span>
+                        <a href="{{ path('site_edit', {'id': site.id}) }}">Modifier</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <button class="add"> <a href="{{ path('site_new') }}">Ajouter un site</a></button> 
+    </div>
+</div>
+    
+{% endblock %}

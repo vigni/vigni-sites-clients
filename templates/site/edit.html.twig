@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification Site{% endblock %}
+
+{% block body %}
+<div class="index">
+
+    <h1>Modification {{ site.name }}</h1>
+    <div class="index-container">
+        {{ include('site/_form.html.twig', {'button_label': 'Update'}) }}
+
+        <a href="{{ path('site_index') }}">Retour à la liste</a>
+
+        {{ include('site/_delete_form.html.twig') }}
+    </div>
+</div>
+{% endblock %}
