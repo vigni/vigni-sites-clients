@@ -28,6 +28,12 @@ Le projet est maintenant installer dans le dossier.
 
 Dans le même terminal de votre projet, veuillez éxécuter la commande : `composer install`. Une installation va dès lors démarrer.
 
+## Données :
+
+Dans le même terminal de votre projet, veuillez éxécuter la commande : `php bin/console d:d:c`. La base de données vient d'être créer.
+Veuillez éxécuter la commande : `php bin/console d:s:u --force`. La structure de la base de données vient d'être créer.
+Veuillez éxécuter la commande : `php bin/console d:f:l`. Un jeu de données est désormais lancé.
+
 ## Votre projet est prêt !
 
 Dans le même terminal, il vous suffit d'éxécuter la commande : `php -S 127.0.0.1:8001 -t public`.
@@ -64,6 +70,12 @@ The project is now install in the folder.
 ## Dependences :
 
 Always in the same terminal, please run this command : `composer install`. An installation will start .
+
+## Données :
+
+In the same terminal of your project, please execute the command: `php bin / console d: d: c`. The database has just been created.
+Please run the command: `php bin / console d: s: u --force`. The structure of the database has just been created.
+Please run the command: `php bin / console d: f: l`. A dataset is now launched.
 
 ## Your project is ready !
 
